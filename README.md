@@ -1,15 +1,9 @@
 # InterDroid
 
 ## 📖 Overview
-InterDroid is an automated GUI testing approach that enhances inter-app functionality testing by implanting structured semantic knowledge into LLM's memory. Our method addresses key challenges in cross-application testing through:
-
-🔍 **Multimodal Knowledge Retrieval**  
-🔄 **Memory Implantation Mechanism**  
-📊 **Dynamic Testing Monitor**  
-🧩 **Seamless Integration** with existing testing tools
+InterDroid is an automated GUI testing approach that enhances inter-app functionality testing by implanting structured semantic knowledge into LLM's memory.
 
 ![Overview](Assets/overview.png)  
-*Figure: InterDroid Architecture*
 
 ## 🚀 Key Features
 - Cross-application Testing Automation
@@ -132,10 +126,9 @@ Refer to our [Code](Code/README.md) page for more details.
 
 ## 📦 Dataset
 
-Our dataset contains three main components:
-- Benchmark Dataset: Test cases for evaluation
-- Knowledge Base Dataset: Training data
-- Complete Inter-app Dataset: Full collection of records
+This part is the Inter-app Dataset: Full collection of records.
+
+This dataset is the combination of Benchmark and Knowledge Base.
 
 The datasets are organized as follows:
 
@@ -168,27 +161,46 @@ Refer to our [Dataset](Dataset/README.md) page for more details.
 
 ## 📊 Benchmark
 
-Our benchmark suite consists of:
+This benchmark is designed to evaluate the effectiveness of automated GUI testing tools, particularly for inter-app functionalities. It includes a carefully curated set of 100 inter-app functionalities from 63 real-world mobile applications. The benchmark is constructed to reflect the distribution of inter-app functionalities observed in the wild, ensuring that it provides a realistic testing environment.
 
-- **Inter-app Test Cases**: Carefully designed test scenarios covering various inter-app interactions
-- **Reference Solutions**: Expert-validated interaction sequences for each test case
-- **Evaluation Metrics**: Standardized metrics for measuring testing performance
-- **Ground Truth Data**: Annotated expected behaviors and outcomes
+### Data Collection
+The benchmark is derived from the Android in the Wild dataset, which contains human demonstrations of device interactions. We manually selected 100 inter-app functionalities from 63 apps, ensuring that the functionalities cover all five categories identified in our pilot study:
+1. **Sharing (29%)**
+2. **System/OS Setting (22%)**
+3. **Third-party Service (21%)**
+4. **Info Synchronization (15%)**
+5. **Authentication (13%)**
 
-The benchmark is structured the same as the Inter-app Dataset.
+### Test Cases
+Each inter-app functionality in the benchmark is accompanied by a set of test cases, including:
+- **Test Scripts**: Manually written scripts that describe the steps to execute the functionality.
+- **GUI Screenshots**: Screenshots of the GUI at each step of the interaction.
+- **View Hierarchy Files**: Files that describe the structure of the GUI, including UI elements and their properties.
 
-For detailed benchmark information and usage guidelines, see [Benchmark Documentation](Benchmark/README.md).
+### Evaluation Metrics
+The benchmark is evaluated using the following metrics:
+- **Page Coverage**: The percentage of pages in the app that are covered by the test.
+- **Action Coverage**: The percentage of actions that are executed during the test.
+- **Exact Match Accuracy (EM)**: The percentage of instances where the predicted sequence of actions exactly matches the ground-truth sequence.
+
+For detailed benchmark information, see [Benchmark Documentation](Benchmark/README.md).
 
 ## 💾 Knowledge Base
 
-Our knowledge base consists of:
+This knowledge base contains structured information about inter-app functionalities extracted from real-world mobile applications. It is designed to support the InterDroid automated GUI testing approach by providing a comprehensive repository of historical inter-app interactions. The knowledge base integrates both visual and textual GUI information to enhance retrieval accuracy and facilitate effective memory implantation in Large Language Models (LLMs).
 
-- **Interaction Records**: Real-world user interaction sequences
-- **Semantic Patterns**: Common behavior patterns and workflows
-- **Cross-app Transitions**: Documented inter-app communication flows
-- **Error Scenarios**: Edge cases and exception handling examples
+### Data Collection
+The knowledge base is constructed from a subset of the Android in the Wild dataset, which includes human demonstrations of device interactions. We randomly selected 500 apps and analyzed their AndroidManifest.xml files to identify inter-app functionalities. A total of 763 inter-app functionalities were collected, and 150 functionalities from 89 apps were selected for the knowledge base.
 
-For detailed knowledge base information and usage guidelines, see [Knowledge Base Documentation](KnowledgeBase/README.md).
+### Categories of Inter-app Functionalities
+The inter-app functionalities in the knowledge base are categorized into five types:
+1. **Sharing (29%)**: Involves sharing content between apps, such as files, images, posts, or links.
+2. **System/OS Setting (22%)**: Manages system-level permissions or settings through inter-app actions.
+3. **Third-party Service (21%)**: Includes interactions with external content, such as reviews, feedback, and payments.
+4. **Info Synchronization (15%)**: Involves the synchronization of user data across different applications or services.
+5. **Authentication (13%)**: Encompasses authentication processes that require users to verify their identity through external platforms.
+
+For detailed knowledge base information, see [Knowledge Base Documentation](KnowledgeBase/README.md).
 
 ## 📈 Experiments Results
 

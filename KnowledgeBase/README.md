@@ -1,6 +1,17 @@
 # Knowledge Base Dataset
 
-This directory contains the knowledge base dataset used for training automated app testing approaches. The knowledge base consists of carefully collected interaction records that capture various user behaviors and app functionalities.
+This knowledge base contains structured information about inter-app functionalities extracted from real-world mobile applications. It is designed to support the InterDroid automated GUI testing approach by providing a comprehensive repository of historical inter-app interactions. The knowledge base integrates both visual and textual GUI information to enhance retrieval accuracy and facilitate effective memory implantation in Large Language Models (LLMs).
+
+## Data Collection
+The knowledge base is constructed from a subset of the Android in the Wild dataset, which includes human demonstrations of device interactions. We randomly selected 500 apps and analyzed their AndroidManifest.xml files to identify inter-app functionalities. A total of 763 inter-app functionalities were collected, and 150 functionalities from 89 apps were selected for the knowledge base.
+
+## Categories of Inter-app Functionalities
+The inter-app functionalities in the knowledge base are categorized into five types:
+1. ​**Sharing (29%)**: Involves sharing content between apps, such as files, images, posts, or links.
+2. ​**System/OS Setting (22%)**: Manages system-level permissions or settings through inter-app actions.
+3. ​**Third-party Service (21%)**: Includes interactions with external content, such as reviews, feedback, and payments.
+4. ​**Info Synchronization (15%)**: Involves the synchronization of user data across different applications or services.
+5. ​**Authentication (13%)**: Encompasses authentication processes that require users to verify their identity through external platforms.
 
 ## Dataset Structure
 
@@ -27,28 +38,6 @@ Knowledge_Base
 |   |-- (same structure as above)
 `-- ...
 ```
-
-## Knowledge Collection Criteria
-
-The knowledge base records were collected based on the following criteria:
-
-1. **Interaction Coverage**: Records that demonstrate:
-   - Common user interaction patterns
-   - Complex multi-step operations
-   - Cross-application workflows
-   - Error handling scenarios
-
-2. **App Functionality Diversity**: Records covering:
-   - Core app features
-   - Different navigation paths
-   - Various UI states
-   - Inter-app communications
-
-3. **Quality Assurance**: Each record is:
-   - Manually verified
-   - Properly annotated
-   - Free of redundant steps
-   - Representative of real user behavior
 
 ## Access
 

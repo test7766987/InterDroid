@@ -1,9 +1,29 @@
 # Benchmark Dataset
 
-This directory contains the benchmark dataset used for evaluating automated app testing approaches. The benchmark consists of carefully selected test cases that cover various user interaction scenarios and app functionalities.
+This benchmark is designed to evaluate the effectiveness of automated GUI testing tools, particularly for inter-app functionalities. It includes a carefully curated set of 100 inter-app functionalities from 63 real-world mobile applications. The benchmark is constructed to reflect the distribution of inter-app functionalities observed in the wild, ensuring that it provides a realistic testing environment.
+
+## Data Collection
+The benchmark is derived from the Android in the Wild dataset, which contains human demonstrations of device interactions. We manually selected 100 inter-app functionalities from 63 apps, ensuring that the functionalities cover all five categories identified in our pilot study:
+1. ​**Sharing (29%)**
+2. ​**System/OS Setting (22%)**
+3. ​**Third-party Service (21%)**
+4. ​**Info Synchronization (15%)**
+5. ​**Authentication (13%)**
+
+## Test Cases
+Each inter-app functionality in the benchmark is accompanied by a set of test cases, including:
+- ​**Test Scripts**: Manually written scripts that describe the steps to execute the functionality.
+- ​**GUI Screenshots**: Screenshots of the GUI at each step of the interaction.
+- ​**View Hierarchy Files**: Files that describe the structure of the GUI, including UI elements and their properties.
+
+## Evaluation Metrics
+The benchmark is evaluated using the following metrics:
+- ​**Page Coverage**: The percentage of pages in the app that are covered by the test.
+- ​**Action Coverage**: The percentage of actions that are executed during the test.
+- ​**Exact Match Accuracy (EM)**: The percentage of instances where the predicted sequence of actions exactly matches the ground-truth sequence.
+
 
 ## Dataset Structure
-
 The benchmark dataset follows the standard structure as described in the main dataset documentation:
 
 ```
@@ -28,31 +48,12 @@ Benchmark
 `-- ...
 ```
 
-## Test Case Selection Criteria
-
-The benchmark test cases were selected based on the following criteria:
-
-1. **Interaction Diversity**: Cases that cover various types of user interactions:
-   - Basic interactions (clicks, swipes)
-   - Text input operations
-   - Complex gesture sequences
-   - Inter-component navigation
-
-2. **Functionality Coverage**: Test cases that exercise different app functionalities:
-   - User authentication
-   - Data input/validation
-   - Content browsing
-   - Media handling
-   - Settings configuration
-
-3. **UI Component Variety**: Cases involving different types of UI elements:
-   - Standard Android widgets
-   - Custom views
-   - Dynamic content
-   - Nested layouts
-
 ## Access
 
 You can access the benchmark dataset through the following link:
 
 [Google Drive](https://drive.google.com/drive/folders/1P3jdUHk7iM9JWvow4gmwUYRcEoyqUw4j?usp=sharing)
+
+
+
+
