@@ -1,0 +1,12 @@
+dashscope==1.22.1
+numpy==2.2.3
+openai==1.66.3
+opencv_contrib_python==4.11.0.86
+opencv_python==4.11.0.86
+opencv_python_headless==4.11.0.86
+Pillow==11.1.0
+Requests==2.32.3
+torch==2.6.0+cu126
+tqdm==4.67.1
+transformers==4.49.0
+uiautomator2==2.16.25

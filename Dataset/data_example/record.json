@@ -1,0 +1,151 @@
+{
+    "target": "Allow users to select a profile picture from the photo album.",
+    "screen_size": {
+        "width": 1080,
+        "height": 2400
+    },
+    "steps": [
+        {
+            "step_id": 1,
+            "action_type": "click",
+            "action_detail": {
+                "x": 461,
+                "y": 2090
+            },
+            "screen_shot": "step_1.png",
+            "activity_info": "com.instagram.android/com.instagram.modal.ModalActivity",
+            "ui_tree": "step_1_ui.xml",
+            "operated_bounds": "[0,811][1080,2337]",
+            "processed_screenshot": "step_1_processed.png"
+        },
+        {
+            "step_id": 2,
+            "action_type": "click",
+            "action_detail": {
+                "x": 326,
+                "y": 1010
+            },
+            "screen_shot": "step_2.png",
+            "activity_info": "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity",
+            "ui_tree": "step_2_ui.xml",
+            "operated_bounds": "[133,927][947,1060]",
+            "processed_screenshot": "step_2_processed.png"
+        },
+        {
+            "step_id": 3,
+            "action_type": "click",
+            "action_detail": {
+                "x": 328,
+                "y": 1201
+            },
+            "screen_shot": "step_3.png",
+            "activity_info": "com.google.android.providers.media.module/com.android.providers.media.photopicker.PhotoPickerUserSelectActivity",
+            "ui_tree": "step_3_ui.xml",
+            "operated_bounds": "[0,438][1080,2337]",
+            "processed_screenshot": "step_3_processed.png"
+        },
+        {
+            "step_id": 4,
+            "action_type": "click",
+            "action_detail": {
+                "x": 67,
+                "y": 650
+            },
+            "screen_shot": "step_4.png",
+            "activity_info": "com.google.android.providers.media.module/com.android.providers.media.photopicker.PhotoPickerUserSelectActivity",
+            "ui_tree": "step_4_ui.xml",
+            "operated_bounds": "[16,601][79,664]",
+            "processed_screenshot": "step_4_processed.png"
+        },
+        {
+            "step_id": 5,
+            "action_type": "click",
+            "action_detail": {
+                "x": 907,
+                "y": 2236
+            },
+            "screen_shot": "step_5.png",
+            "activity_info": "com.instagram.android/com.instagram.modal.ModalActivity",
+            "ui_tree": "step_5_ui.xml",
+            "processed_screenshot": "step_5_processed.png"
+        },
+        {
+            "step_id": 6,
+            "action_type": "click",
+            "action_detail": {
+                "x": 530,
+                "y": 1366
+            },
+            "screen_shot": "step_6.png",
+            "activity_info": "com.android.settings/.applications.InstalledAppDetails",
+            "ui_tree": "step_6_ui.xml",
+            "operated_bounds": "[0,1335][1080,1534]",
+            "processed_screenshot": "step_6_processed.png"
+        },
+        {
+            "step_id": 7,
+            "action_type": "click",
+            "action_detail": {
+                "x": 365,
+                "y": 1428
+            },
+            "screen_shot": "step_7.png",
+            "activity_info": "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.ManagePermissionsActivity",
+            "ui_tree": "step_7_ui.xml",
+            "operated_bounds": "[189,1247][1038,1453]",
+            "processed_screenshot": "step_7_processed.png"
+        },
+        {
+            "step_id": 8,
+            "action_type": "click",
+            "action_detail": {
+                "x": 449,
+                "y": 1696
+            },
+            "screen_shot": "step_8.png",
+            "activity_info": "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.ManagePermissionsActivity",
+            "ui_tree": "step_8_ui.xml",
+            "operated_bounds": "[63,1689][1038,1740]",
+            "processed_screenshot": "step_8_processed.png"
+        },
+        {
+            "step_id": 9,
+            "action_type": "click",
+            "action_detail": {
+                "x": 974,
+                "y": 1460
+            },
+            "screen_shot": "step_9.png",
+            "activity_info": "com.google.android.providers.media.module/com.android.providers.media.photopicker.PhotoPickerUserSelectActivity",
+            "ui_tree": "step_9_ui.xml",
+            "operated_bounds": "[0,438][1080,2337]",
+            "processed_screenshot": "step_9_processed.png"
+        },
+        {
+            "step_id": 10,
+            "action_type": "click",
+            "action_detail": {
+                "x": 907,
+                "y": 2208
+            },
+            "screen_shot": "step_10.png",
+            "activity_info": "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.ManagePermissionsActivity",
+            "ui_tree": "step_10_ui.xml",
+            "operated_bounds": "[0,0][1080,2337]",
+            "processed_screenshot": "step_10_processed.png"
+        },
+        {
+            "step_id": 11,
+            "action_type": "click",
+            "action_detail": {
+                "x": 73,
+                "y": 138
+            },
+            "screen_shot": "step_11.png",
+            "activity_info": "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.ManagePermissionsActivity",
+            "ui_tree": "step_11_ui.xml",
+            "operated_bounds": "[0,63][147,210]",
+            "processed_screenshot": "step_11_processed.png"
+        }
+    ]
+}
