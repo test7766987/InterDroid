@@ -90,6 +90,18 @@ Dataset (Benchmark/Knowledge_Base/Inter-app Dataset)
 
 Refer to our [Dataset](Dataset/README.md) page for more details.
 
+## 📊 Benchmark
+
+Our benchmark suite consists of:
+
+- **Inter-app Test Cases**: 200+ carefully designed test scenarios covering various inter-app interactions
+- **Reference Solutions**: Expert-validated interaction sequences for each test case
+- **Evaluation Metrics**: Standardized metrics for measuring testing performance
+- **Ground Truth Data**: Annotated expected behaviors and outcomes
+
+The benchmark is structured the same as the Inter-app Dataset.
+
+For detailed benchmark information and usage guidelines, see [Benchmark Documentation](Benchmark/README.md).
 
 ## 📈 Experiments Results
 
