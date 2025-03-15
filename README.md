@@ -228,7 +228,7 @@ Key advantages:
 
 This are examples of our method InterDroid test app approach:
 
-<img src="Assets/example1.gif" width="200" height="400" style="display: inline-block; margin-right: 10px" /> <img src="Assets/example2.gif" width="200" height="400" style="display: inline-block" />
+<img src="Assets/example1.gif" width="200" height="400" style="display: inline-block; margin-right: 10px" /> <img src="Assets/example2.gif" width="200" height="400" style="display: inline-block; margin-right: 10px" /> <img src="Assets/example3.gif" width="200" height="400" style="display: inline-block" />
 
 
 ### RQ2: Ablation Study  
