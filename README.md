@@ -226,7 +226,7 @@ Key advantages:
 • Maintained task-aware context across app transitions  
 • Avoided 92% of permission/authorization errors in sensitive scenarios  
 
-This are examples of our method InterDroid test app approach:
+These are examples of our method InterDroid testing apps:
 
 <img src="Assets/example1.gif" width="200" height="400" style="display: inline-block; margin-right: 10px" /> <img src="Assets/example2.gif" width="200" height="400" style="display: inline-block; margin-right: 10px" /> <img src="Assets/example3.gif" width="200" height="400" style="display: inline-block" />
 
