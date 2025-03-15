@@ -126,6 +126,8 @@ Refer to our [Code](Code/README.md) page for more details.
 
 ## 📦 Dataset
 
+Due to the large data size(10G+), which exceeds GitHub's capacity, we have uploaded the detailed data to [Google Drive](https://drive.google.com/drive/folders/1P3jdUHk7iM9JWvow4gmwUYRcEoyqUw4j?usp=sharing).
+
 This part is the Inter-app Dataset: Full collection of records.
 
 This dataset is the combination of Benchmark and Knowledge Base.
@@ -161,6 +163,8 @@ Refer to our [Dataset](Dataset/README.md) page for more details.
 
 ## 📊 Benchmark
 
+Due to the large data size(7G+), which exceeds GitHub's capacity, we have uploaded the detailed data to [Google Drive](https://drive.google.com/drive/folders/1P3jdUHk7iM9JWvow4gmwUYRcEoyqUw4j?usp=sharing).
+
 This benchmark is designed to evaluate the effectiveness of automated GUI testing tools, particularly for inter-app functionalities. It includes a carefully curated set of 100 inter-app functionalities from 63 real-world mobile applications. The benchmark is constructed to reflect the distribution of inter-app functionalities observed in the wild, ensuring that it provides a realistic testing environment.
 
 ### Data Collection
@@ -186,6 +190,8 @@ The benchmark is evaluated using the following metrics:
 For detailed benchmark information, see [Benchmark Documentation](Benchmark/README.md).
 
 ## 💾 Knowledge Base
+
+Due to the large data size(270M+), which exceeds GitHub's capacity, we have uploaded the detailed data to [Google Drive](https://drive.google.com/drive/folders/1P3jdUHk7iM9JWvow4gmwUYRcEoyqUw4j?usp=sharing).
 
 This knowledge base contains structured information about inter-app functionalities extracted from real-world mobile applications. It is designed to support the InterDroid automated GUI testing approach by providing a comprehensive repository of historical inter-app interactions. The knowledge base integrates both visual and textual GUI information to enhance retrieval accuracy and facilitate effective memory implantation in Large Language Models (LLMs).
 
