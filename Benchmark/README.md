@@ -54,6 +54,8 @@ You can access the benchmark dataset through the following link:
 
 [Google Drive](https://drive.google.com/drive/folders/1P3jdUHk7iM9JWvow4gmwUYRcEoyqUw4j?usp=sharing)
 
+Please note that due to the storage limitations of Google Drive, only the complete Inter-app Dataset (with corresponding APKs for each app) and the complete Knowledge Base Dataset (which does not require APKs) are available in [the above Google Drive link](https://drive.google.com/drive/folders/1P3jdUHk7iM9JWvow4gmwUYRcEoyqUw4j?usp=sharing). Due to storage constraints, the Benchmark Dataset is provided without the associated APKs. However, we have made the complete Benchmark Dataset, including the corresponding APKs for each app, available in [a separate Google Drive link](https://drive.google.com/drive/folders/1rC_OTxIg5bqFRVaY636bfPOpV_P8-1eE?usp=sharing).
+
 
 
 
