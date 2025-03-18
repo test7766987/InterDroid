@@ -49,6 +49,8 @@ Benchmark
 
 ## Using Interdroid for Benchmark Evaluation
 
+The following section describes Interdroid as an example implementation for benchmark evaluation. For new methods, you can implement the abstract interface defined in `testing_tool.py` or modify the code according to your specific requirements. The abstract interface provides a foundation that can be extended to create custom testing tools while maintaining compatibility with the benchmark evaluation framework.
+
 Interdroid is a tool designed to evaluate automated testing approaches against this benchmark. It uses LLM-based intelligent testing to generate test actions and can calculate various coverage metrics.
 
 ### Prerequisites
