@@ -13,11 +13,11 @@ logging.basicConfig(
         logging.StreamHandler(sys.stdout)
     ]
 )
-logger = logging.getLogger('interdroid')
+logger = logging.getLogger('benchmark')
 
 def parse_arguments():
     """Parse command line arguments"""
-    parser = argparse.ArgumentParser(description='Interdroid: Automated Testing Tool')
+    parser = argparse.ArgumentParser(description='Automated Testing Tool')
     
     # Required arguments
     parser.add_argument('-o', '--output', required=True, help='Output directory')
@@ -106,16 +106,26 @@ def main():
     # Set environment variables if needed
     os.environ['OPENAI_API_KEY'] = config['llm']['openai_api_key']
     
-    # Run the LLM-based test
-    logger.info("Starting LLM-based intelligent testing")
-    from interdroid.main import main as llm_main
-    llm_main(args.record)
+    # Run the test using the abstract testing tool
+    logger.info("Starting intelligent testing")
+    
+    # Import and use testing_tool instead of directly calling llm_main
+    from benchmark_script.testing_tool import run_test
+    run_test(
+        run_dir=run_dir,
+        record=args.record,
+        test_case=args.case,
+        duration=parse_time(args.time),
+        repeat=args.repeat,
+        wait_time=args.wait,
+        config=config
+    )
     
     # Calculate metrics if requested
     results = {}
     
     if args.page_coverage:
-        from interdroid.page_coverage import calculate_page_coverage
+        from benchmark_script.page_coverage import calculate_page_coverage
         benchmark_screenshots_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
                                                "Benchmark", f"case_{args.case}", "screenshots") if args.case else None
         
@@ -128,7 +138,7 @@ def main():
             logger.warning("Benchmark screenshots directory not found, cannot calculate page coverage")
     
     if args.action_coverage:
-        from interdroid.action_coverage import calculate_action_coverage
+        from benchmark_script.action_coverage import calculate_action_coverage
         benchmark_actions_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
                                             "Benchmark", f"case_{args.case}", "actions.json") if args.case else None
         
@@ -141,7 +151,7 @@ def main():
             logger.warning("Benchmark actions file not found, cannot calculate action coverage")
     
     if args.exact_match:
-        from interdroid.exact_match import calculate_exact_match
+        from benchmark_script.exact_match import calculate_exact_match
         benchmark_actions_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
                                             "Benchmark", f"case_{args.case}", "actions.json") if args.case else None
         

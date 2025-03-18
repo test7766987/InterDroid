@@ -87,7 +87,7 @@ Replace the values with your specific configuration:
 To run Interdroid with the default settings:
 
 ```bash
-python -m interdroid.interdroid -o ./output
+python -m benchmark_script.benchmark -o ./output
 ```
 
 This will:
@@ -100,7 +100,7 @@ This will:
 Interdroid supports several command-line options:
 
 ```bash
-python -m interdroid.interdroid -o ./output [OPTIONS]
+python -m benchmark_script.benchmark -o ./output [OPTIONS]
 ```
 
 Available options:
@@ -122,7 +122,7 @@ To calculate evaluation metrics, add the following flags:
 Example:
 
 ```bash
-python -m interdroid.interdroid -o ./output --case 1 --page-coverage --action-coverage --exact-match
+python -m benchmark_script.benchmark -o ./output --case 1 --page-coverage --action-coverage --exact-match
 ```
 
 This will run the test on case 1 and calculate all three metrics.
