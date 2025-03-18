@@ -22,7 +22,6 @@ The benchmark is evaluated using the following metrics:
 - ​**Action Coverage**: The percentage of actions that are executed during the test.
 - ​**Exact Match Accuracy (EM)**: The percentage of instances where the predicted sequence of actions exactly matches the ground-truth sequence.
 
-
 ## Dataset Structure
 The benchmark dataset follows the standard structure as described in the main dataset documentation:
 
@@ -47,6 +46,99 @@ Benchmark
 |   |-- (same structure as above)
 `-- ...
 ```
+
+## Using Interdroid for Benchmark Evaluation
+
+Interdroid is a tool designed to evaluate automated testing approaches against this benchmark. It uses LLM-based intelligent testing to generate test actions and can calculate various coverage metrics.
+
+### Prerequisites
+
+1. Python 3.8 or higher
+2. Android emulator or physical device
+3. OpenAI API key
+4. Required Python packages (install via `pip install -r requirements.txt`)
+
+### Configuration
+
+Before running Interdroid, you need to create a `config.ini` file with the following structure:
+
+```ini
+[llm]
+openai_api_key = your_openai_api_key_here
+openai_model = gpt-4-vision-preview
+
+[uiautomator2]
+android_device = emulator-5554
+
+[data]
+data_dir = /path/to/KnowledgeBase
+```
+
+Replace the values with your specific configuration:
+- `openai_api_key`: Your OpenAI API key
+- `openai_model`: The OpenAI model to use (default: gpt-4-vision-preview)
+- `android_device`: The Android device ID (use `adb devices` to find it)
+- `data_dir`: The path to the Benchmark directory
+
+### Basic Usage
+
+To run Interdroid with the default settings:
+
+```bash
+python -m interdroid.interdroid -o ./output
+```
+
+This will:
+1. Start the LLM-based intelligent testing
+2. Generate test actions based on the current UI
+3. Save the results to the specified output directory
+
+### Advanced Options
+
+Interdroid supports several command-line options:
+
+```bash
+python -m interdroid.interdroid -o ./output [OPTIONS]
+```
+
+Available options:
+
+- `--case INT`: Specify which test case to run from the Benchmark
+- `--time DURATION`: Test duration, format: hours(6h), minutes(6m), or seconds(6s), default: 6h
+- `--repeat INT`: Number of times to repeat the test, default: 1
+- `--wait INT`: Idle time to wait before testing (seconds)
+- `--record RECORD_ID`: Specific record to use as reference (e.g., "record_1")
+
+### Evaluation Metrics
+
+To calculate evaluation metrics, add the following flags:
+
+- `--page-coverage`: Calculate page coverage
+- `--action-coverage`: Calculate action coverage
+- `--exact-match`: Calculate exact match rate
+
+Example:
+
+```bash
+python -m interdroid.interdroid -o ./output --case 1 --page-coverage --action-coverage --exact-match
+```
+
+This will run the test on case 1 and calculate all three metrics.
+
+### Interpreting Results
+
+After running Interdroid, you'll find the following in your output directory:
+
+- `args.json`: The command-line arguments used
+- `screenshots/`: Directory containing screenshots of each step
+- `actions.json`: The sequence of actions performed
+- `results.json`: Evaluation metrics including page coverage, action coverage, and exact match rate
+
+The `results.json` file will contain detailed information about:
+- Percentage of pages covered
+- Percentage of actions covered
+- Exact match accuracy
+- Details about covered and uncovered transitions
 
 ## Access
 
